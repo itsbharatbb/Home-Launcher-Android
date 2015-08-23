@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 public class MyLauncherActivity extends Activity {
     RelativeLayout launcherLayout;
@@ -33,30 +32,25 @@ public class MyLauncherActivity extends Activity {
 
         @Override
         public void onShowPress(MotionEvent e) {
-            Toast.makeText(getBaseContext(),"onShowPress",Toast.LENGTH_SHORT).show();
 
         }
 
         @Override
         public boolean onSingleTapUp(MotionEvent e) {
-            Toast.makeText(getBaseContext(),"OnSingleTap",Toast.LENGTH_SHORT).show();
             return true;
         }
 
         @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-            Toast.makeText(getBaseContext(), "OnScroll", Toast.LENGTH_SHORT).show();
             return false;
         }
 
         @Override
         public void onLongPress(MotionEvent e) {
-            Toast.makeText(getBaseContext(),"onLongPress",Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            Toast.makeText(getBaseContext(),"OnFling",Toast.LENGTH_SHORT).show();
             return true;
         }
     };
