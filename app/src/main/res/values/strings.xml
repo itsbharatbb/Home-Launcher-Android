@@ -2,7 +2,7 @@
     <string name="app_name">Home-Launcher-Android</string>
     <string name="title_activity_my_launcher">MyLauncherActivity</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello  world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_all_apps">AllAppsActivity</string>
 </resources>
