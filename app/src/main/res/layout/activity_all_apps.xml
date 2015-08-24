@@ -3,12 +3,12 @@
     android:layout_height="match_parent"
     tools:context="ex.home_launcher_android">
     <GridView
+        android:id="@+id/allAppsGrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/AllAppsGrid"
         android:background="#55000000"
-        android:numColumns="auto_fit"
-        android:columnWidth="50dp">
+        android:columnWidth="50dp"
+        android:numColumns="auto_fit">
 
     </GridView>
 

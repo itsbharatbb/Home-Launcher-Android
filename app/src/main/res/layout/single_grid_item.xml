@@ -5,13 +5,14 @@
     >
 
     <ImageButton
+        android:id="@+id/appIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/appIcon"
-        android:src="@mipmap/ic_launcher"
         android:background="#00000010"
+        android:src="@mipmap/ic_launcher"
         />
     <TextView
+        android:id="@+id/appLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/generic_app_name"
