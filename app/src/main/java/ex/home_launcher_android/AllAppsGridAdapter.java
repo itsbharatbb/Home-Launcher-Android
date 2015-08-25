@@ -9,11 +9,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class AllAppsGridAdapter extends BaseAdapter {
-    CachingClass cachingClass;
+    IconCachingClass cachingClass;
     Context context;
     AllAppsGridAdapter(Context context){
         this.context=context;
-        cachingClass = new CachingClass(context);
+        cachingClass = new IconCachingClass(context);
     }
     @Override
     public int getCount() {

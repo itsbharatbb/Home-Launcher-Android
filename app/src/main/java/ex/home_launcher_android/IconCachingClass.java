@@ -15,12 +15,12 @@ import java.io.FileOutputStream;
 import java.util.List;
 
 
-public class CachingClass {
+public class IconCachingClass {
     Context context;
     PackageManager pm;
     List<ResolveInfo> appsList; //Contains ResolviInfos of all apps based on Intent
 
-    CachingClass(Context context){
+    IconCachingClass(Context context){
         this.context=context;
         pm=context.getPackageManager();
         appsList = pm.queryIntentActivities(new Intent(Intent.ACTION_MAIN)
