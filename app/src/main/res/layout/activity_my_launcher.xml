@@ -1,75 +1,76 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/launcherLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ex.home_launcher_android"
-    android:id="@+id/launcherLayout">
+    tools:context="ex.home_launcher_android">
 
     <DigitalClock
+        android:id="@+id/textClock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textClock"
-        android:typeface="serif"
-        android:textStyle="bold"
-        android:textColor="#66000000"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="60dp"
+        android:textColor="#66000000"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:rowCount="2"
-        android:columnCount="3"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp">
+        android:layout_marginBottom="25dp"
+        android:columnCount="3"
+        android:rowCount="2">
 
         <ImageButton
-            android:padding="25dp"
-            android:background="@android:color/transparent"
+            android:id="@+id/ib_dialler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ib_dialler"
+            android:background="@android:color/transparent"
+            android:padding="25dp"
             android:src="@drawable/ic_dialler"/>
 
         <ImageButton
-            android:padding="25dp"
-            android:background="@android:color/transparent"
+            android:id="@+id/ib_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ib_message"
+            android:background="@android:color/transparent"
+            android:padding="25dp"
             android:src="@drawable/ib_message"/>
 
         <ImageButton
-            android:padding="25dp"
-            android:background="@android:color/transparent"
+            android:id="@+id/ib_mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ib_mail"
+            android:background="@android:color/transparent"
+            android:padding="25dp"
             android:src="@drawable/ib_mail"/>
 
         <ImageButton
-            android:padding="25dp"
-            android:background="@android:color/transparent"
+            android:id="@+id/ib_browser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ib_browser"
+            android:background="@android:color/transparent"
+            android:padding="25dp"
             android:src="@drawable/ib_browser"/>
 
         <ImageButton
-            android:padding="25dp"
-            android:background="@android:color/transparent"
+            android:id="@+id/ib_files"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ib_files"
+            android:background="@android:color/transparent"
+            android:padding="25dp"
             android:src="@drawable/ib_files" />
 
         <ImageButton
-            android:padding="25dp"
-            android:background="@android:color/transparent"
+            android:id="@+id/ib_music"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ib_music"
+            android:background="@android:color/transparent"
+            android:padding="25dp"
             android:src="@drawable/ib_music"/>
 
     </GridLayout>

@@ -23,12 +23,10 @@ public class IconCachingClass {
     IconCachingClass(Context context){
         this.context=context;
         pm=context.getPackageManager();
-        appsList = pm.queryIntentActivities(new Intent(Intent.ACTION_MAIN)
-                .addCategory(Intent.CATEGORY_LAUNCHER),0);
+        appsList = pm.queryIntentActivities(new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER),0);
     }
 
     void cacheIcons() {
-
         Drawable drawableIcon;
         Bitmap icon;
         File file;
@@ -51,10 +49,6 @@ public class IconCachingClass {
     Bitmap drawableToBitmap (Drawable drawable) {
         Bitmap bitmap;
         Canvas canvas;
-
-
-
-
         if (drawable.getIntrinsicHeight() >0 || drawable.getIntrinsicWidth()>0){
             bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
         }
@@ -68,6 +62,7 @@ public class IconCachingClass {
                 return bitmapDrawable.getBitmap();
             }
         }
+
 
         canvas = new Canvas(bitmap);
         drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());

@@ -4,10 +4,10 @@
     android:orientation="vertical"
     >
 
-    <ImageButton
+    <ImageView
         android:id="@+id/appIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:background="#00000010"
         android:src="@mipmap/ic_launcher"
         />
@@ -15,6 +15,8 @@
         android:id="@+id/appLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:text="@string/generic_app_name"
         android:textColor="#99000011"/>
 </LinearLayout>

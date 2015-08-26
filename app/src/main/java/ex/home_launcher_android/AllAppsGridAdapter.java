@@ -1,11 +1,13 @@
 package ex.home_launcher_android;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AllAppsGridAdapter extends BaseAdapter {
@@ -14,6 +16,7 @@ public class AllAppsGridAdapter extends BaseAdapter {
     AllAppsGridAdapter(Context context){
         this.context=context;
         cachingClass = new IconCachingClass(context);
+        cachingClass.cacheIcons();
     }
     @Override
     public int getCount() {
@@ -31,28 +34,38 @@ public class AllAppsGridAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        TextView textView;
-        ImageButton imageButton;
+    public View getView(int position, View convertView, ViewGroup parent){
         ViewHolder viewHolder;
         if(convertView==null){
             convertView=LayoutInflater.from(context).inflate(R.layout.single_grid_item,parent,false);
             viewHolder= new ViewHolder();
-            viewHolder.icon=(ImageButton) convertView.findViewById(R.id.appIcon);
+            viewHolder.icon=(ImageView) convertView.findViewById(R.id.appIcon);
             viewHolder.label=(TextView) convertView.findViewById(R.id.appLabel);
+            viewHolder.intent = new Intent();
             convertView.setTag(viewHolder);
         }
         else {
             viewHolder = (ViewHolder)convertView.getTag();
         }
 
-        viewHolder.icon.setImageDrawable(context.getResources().getDrawable(R.drawable.ib_browser, null));
+
+//        viewHolder.icon.setImageBitmap(BitmapFactory.decodeFile(context.getFilesDir() + "/" + cachingClass.appsList.get(position).activityInfo.packageName));
         viewHolder.label.setText("App");
+        viewHolder.intent.setClassName(cachingClass.appsList.get(position).
+                activityInfo.packageName, cachingClass.appsList.get(position).activityInfo.name);
+        try {
+            viewHolder.icon.setImageDrawable(context.getPackageManager().getActivityIcon(viewHolder.intent));
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
         return convertView;
+
     }
 
-    private static class ViewHolder {
+    protected static class ViewHolder {
         TextView label;
-        ImageButton icon;
+        ImageView icon;
+        Intent intent;
     }
 }
