@@ -23,23 +23,12 @@
         </activity>
         <activity
             android:name=".AllAppsActivity"
-            android:label="@string/title_activity_all_apps" >
+            android:label="@string/title_activity_all_apps"
+            android:theme="@android:style/Theme.Material">
         </activity>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" >
-        </activity>
-        <activity
-            android:name=".FavoriteAppsActivity"
-            android:label="@string/title_activity_quick_launch" >
-        </activity>
-        <activity
-            android:name=".RecentAppsActivity"
-            android:label="@string/title_activity_recent_apps" >
-        </activity>
-        <activity
-            android:name=".MostUsedAppsActivity"
-            android:label="@string/title_activity_most_used_apps" >
         </activity>
     </application>
 

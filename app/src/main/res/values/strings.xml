@@ -11,4 +11,7 @@
     <string name="title_activity_quick_launch">QuickLaunchActivity</string>
     <string name="title_activity_recent_apps">RecentAppsActivity</string>
     <string name="title_activity_most_used_apps">MostUsedAppsActivity</string>
+    <string name="most_recent">R</string>
+    <string name="most_used">U</string>
+    <string name="alphabetical">A</string>
 </resources>
