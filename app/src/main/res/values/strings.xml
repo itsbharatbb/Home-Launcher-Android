@@ -5,7 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="all_apps__button">Button for All Apps</string>
-    <string name="title_activity_all_apps">AllAppsActivity</string>
+    <string name="title_activity_all_apps">Apps</string>
     <string name="generic_app_name">App Name</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_quick_launch">QuickLaunchActivity</string>

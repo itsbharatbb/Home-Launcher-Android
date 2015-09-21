@@ -52,8 +52,7 @@ public class IconCachingClass {
         if (drawable.getIntrinsicHeight() >0 || drawable.getIntrinsicWidth()>0){
             bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
         }
-        else
-            bitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888); // Single color bitmap will be created of 1x1 pixel
+        else bitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888); // Single color bitmap will be created of 1x1 pixel
 
 
         if (drawable instanceof BitmapDrawable) {
@@ -68,6 +67,14 @@ public class IconCachingClass {
         drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
         drawable.draw(canvas);
         return bitmap;
+    }
+
+    Drawable bitmapToDrawable(Bitmap bitmap){
+        //TrashCode : later work
+        //        viewHolder.icon.setImageBitmap(BitmapFactory.decodeFile(context.getFilesDir() + "/" + cachingClass.appsList.get(position).activityInfo.packageName));
+//        viewHolder.intent.setClassName(cachingClass.appsList.get(position).
+//                activityInfo.packageName, cachingClass.appsList.get(position).activityInfo.name);
+        return null;
     }
 
 
